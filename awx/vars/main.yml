@@ -1,0 +1,6 @@
+---
+# vars file for awx
+users:
+  - "PC"
+  - "RK"
+  - "TZ"
