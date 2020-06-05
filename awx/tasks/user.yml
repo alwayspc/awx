@@ -5,4 +5,4 @@
     groups: "admin,tower"
   with_items: "{{ users }}"
   tags:
-    - users.yml
+    - target_user
