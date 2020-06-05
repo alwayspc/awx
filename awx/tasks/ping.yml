@@ -1,3 +1,6 @@
 ---
-- name: ping 
-  ping: 
+- name: Display the config
+  debug:
+    msg: "This is Target mechain"
+  tags:
+   - target_ping
