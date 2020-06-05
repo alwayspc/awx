@@ -4,11 +4,5 @@
     name: "{{ item }}"
     groups: "admin,tower"
   with_items: "{{ users }}"
-- name: Allow admin users to sudo without a password
-  lineinfile:
-     dest: "/etc/sudoers"
-     state: "present"
-     regexp: "^%admin"
-     line: "%admin ALL=(ALL) NOPASSWD: ALL"
   tags:
     - users.yml
