@@ -1,8 +1,6 @@
 ---
-- name: create user accounts
-  user:
-    name: "{{ item }}"
-    groups: "admin,tower"
-  with_items: "{{ users }}"
+- name: Display the config
+  debug:
+    msg: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
   tags:
-    - target_user
+   - target_user
