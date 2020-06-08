@@ -13,3 +13,7 @@
 - name: debug output
   debug:
     msg: "This is output {{ output }}"
+- name: Execute a command using the shell module
+  become: true
+  become_user: Ansible
+  shell: hostnamectl
