@@ -6,6 +6,8 @@
    - target_user
 
 - name: Get Target host detials
+  become: true
+  become_user: Ansible
   command: hostname
   register: "output"
   tags:
@@ -13,7 +15,7 @@
 - name: debug output
   debug:
     msg: "This is output {{ output }}"
-- name: Execute a command using the shell module
-  become: true
-  become_user: Ansible
-  shell: hostnamectl
+#- name: Execute a command using the shell module
+  #become: true
+  #become_user: Ansible
+  #shell: hostnamectl
