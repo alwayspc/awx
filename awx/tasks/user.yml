@@ -12,4 +12,4 @@
    - target_hostname
 - name: debug output
   debug:
-    msg: "This is output {{output}}"
+    msg: "This is output {{ output }}"
