@@ -5,14 +5,14 @@
   tags:
    - target_user
 
-- name: Get Target host detials
-  command: hostnamectl
-  register: "output"
-  tags:
-   - target_hostname
-- name: debug output
-  debug:
-    msg: "This is output {{ output }}"
+#- name: Get Target host detials
+  #command: hostnamectl
+  #register: "output"
+  #tags:
+   #- target_hostname
+#- name: debug output
+  #debug:
+    #msg: "This is output {{ output }}"
 - name: Execute a command using the shell module
   become: true
   become_user: Ansible
