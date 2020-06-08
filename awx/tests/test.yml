@@ -1,5 +1,7 @@
 ---
 - hosts: localhost
   remote_user: root
+  become_password: Ansible@12345
+  vault_password: Ansible@12345
   roles:
     - awx
