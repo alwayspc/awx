@@ -8,7 +8,7 @@
 - name: Get Target host detials
   become: true
   become_user: Ansible
-  command: hostname
+  command: hostnamectl
   register: "output"
   tags:
    - target_hostname
