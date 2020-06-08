@@ -1,2 +1,6 @@
 localhost
 
+[Target]
+ansible_user=Ansible
+ansible_password=Ansible@123456
+ansible_auth_pass=Ansible@123456
