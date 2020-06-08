@@ -7,5 +7,9 @@
 
 - name: Get Target host detials
   command: hostname
+  register: "output"
   tags:
    - target_hostname
+- name: debug output
+  debug:
+    msg: "This is output {{output}}"
