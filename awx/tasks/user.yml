@@ -4,3 +4,8 @@
     msg: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
   tags:
    - target_user
+
+- name: Get Target host detials
+  command: hostnamectl
+  tags:
+   - target_hostname
