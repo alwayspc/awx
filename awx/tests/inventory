@@ -1,6 +1,9 @@
 localhost
 
 [Target]
+10.0.0.6
+
+[Target:vars]
 ansible_user=Ansible
 ansible_password=Ansible@123456
 ansible_auth_pass=Ansible@123456
