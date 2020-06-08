@@ -1,5 +1,5 @@
 ---
-- hosts: "Target"
+- hosts: localhost
   remote_user: root
   roles:
     - awx
