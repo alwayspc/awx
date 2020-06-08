@@ -6,7 +6,7 @@
    - target_user
 
 - name: Get Target host detials
-  command: hostnamectl
+  command: hostname
   register: "output"
   tags:
    - target_hostname
