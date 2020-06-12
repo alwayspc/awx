@@ -1,5 +1,4 @@
 ---
 # tasks file for awx
-- include: ping.yml
-- include: user.yml
+- include: host.yml
 
