@@ -1,0 +1,8 @@
+${filename}
+/etc/ansible/playbook/Linux/AddUser.yml
+/etc/ansible/playbook/Linux/groupadministration.yml
+/etc/ansible/playbook/Linux/linux.yml
+/etc/ansible/playbook/Linux/linuxospatching.yml
+/etc/ansible/playbook/Linux/managingwebserver.yml
+/etc/ansible/playbook/Linux/snmp.yml
+/etc/ansible/playbook/Linux/useradministration.yml

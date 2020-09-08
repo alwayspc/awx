@@ -1,0 +1,3 @@
+${filename}
+/etc/ansible/playbook/Network-LAN/AWXservice.yml
+/etc/ansible/playbook/Network-LAN/Networks.yml

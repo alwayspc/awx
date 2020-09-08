@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.6.8 on linux)" generated="20200908 04:20:37.440" rpa="false">
+<suite id="s1" name="Winrobottest" source="/opt/robot/windows/winrobottest.robot">
+<test id="s1-t1" name="testcase1">
+<kw name="print files">
+<arguments>
+<arg>/etc/ansible/playbook/Windows/windows.yml</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${filename}</arg>
+</arguments>
+<status status="PASS" starttime="20200908 04:20:37.552" endtime="20200908 04:20:37.552"></status>
+</kw>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>python3</arg>
+<arg>winrobot.py</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200908 04:20:37.553" level="INFO">Starting process:
+python3 winrobot.py</msg>
+<msg timestamp="20200908 04:20:37.558" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200908 04:20:38.898" level="INFO">Process completed.</msg>
+<msg timestamp="20200908 04:20:38.899" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20200908 04:20:37.553" endtime="20200908 04:20:38.899"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${result.stdout}</arg>
+<arg>${filename}</arg>
+<arg>msg=Contain Syntax error</arg>
+</arguments>
+<assign>
+<var>${a}</var>
+</assign>
+<msg timestamp="20200908 04:20:38.901" level="FAIL">Contain Syntax error: '[]' does not contain '/etc/ansible/playbook/Windows/windows.yml'</msg>
+<status status="FAIL" starttime="20200908 04:20:38.900" endtime="20200908 04:20:38.901"></status>
+</kw>
+<status status="FAIL" starttime="20200908 04:20:37.551" endtime="20200908 04:20:38.902"></status>
+</kw>
+<status status="FAIL" starttime="20200908 04:20:37.550" endtime="20200908 04:20:38.902" critical="yes">Contain Syntax error: '[]' does not contain '/etc/ansible/playbook/Windows/windows.yml'</status>
+</test>
+<status status="FAIL" starttime="20200908 04:20:37.443" endtime="20200908 04:20:38.903"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Winrobottest">Winrobottest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

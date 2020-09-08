@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.6.8 on linux)" generated="20200908 04:04:19.121" rpa="false">
+<suite id="s1" name="Linuxrobottest" source="/opt/robot/linux/linuxrobottest.robot">
+<test id="s1-t1" name="testcase1">
+<kw name="print files">
+<arguments>
+<arg>/etc/ansible/playbook/Linux/AddUser.yml</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${filename}</arg>
+</arguments>
+<status status="PASS" starttime="20200908 04:04:19.232" endtime="20200908 04:04:19.233"></status>
+</kw>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>python3</arg>
+<arg>linuxrobot.py</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200908 04:04:19.233" level="INFO">Starting process:
+python3 linuxrobot.py</msg>
+<msg timestamp="20200908 04:04:19.239" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200908 04:04:26.931" level="INFO">Process completed.</msg>
+<msg timestamp="20200908 04:04:26.932" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20200908 04:04:19.233" endtime="20200908 04:04:26.932"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${result.stdout}</arg>
+<arg>${filename}</arg>
+<arg>msg=Contain Syntax error</arg>
+</arguments>
+<assign>
+<var>${a}</var>
+</assign>
+<msg timestamp="20200908 04:04:26.935" level="INFO">${a} = None</msg>
+<status status="PASS" starttime="20200908 04:04:26.933" endtime="20200908 04:04:26.935"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${a}</arg>
+</arguments>
+<status status="PASS" starttime="20200908 04:04:26.936" endtime="20200908 04:04:26.936"></status>
+</kw>
+<status status="PASS" starttime="20200908 04:04:19.231" endtime="20200908 04:04:26.937"></status>
+</kw>
+<status status="PASS" starttime="20200908 04:04:19.230" endtime="20200908 04:04:26.938" critical="yes"></status>
+</test>
+<test id="s1-t2" name="testcase1">
+<kw name="print files">
+<arguments>
+<arg>/etc/ansible/playbook/Linux/groupadministration.yml</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${filename}</arg>
+</arguments>
+<status status="PASS" starttime="20200908 04:04:26.943" endtime="20200908 04:04:26.943"></status>
+</kw>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>python3</arg>
+<arg>linuxrobot.py</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200908 04:04:26.944" level="INFO">Starting process:
+python3 linuxrobot.py</msg>
+<msg timestamp="20200908 04:04:26.950" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200908 04:04:34.380" level="INFO">Process completed.</msg>
+<msg timestamp="20200908 04:04:34.380" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20200908 04:04:26.943" endtime="20200908 04:04:34.380"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${result.stdout}</arg>
+<arg>${filename}</arg>
+<arg>msg=Contain Syntax error</arg>
+</arguments>
+<assign>
+<var>${a}</var>
+</assign>
+<msg timestamp="20200908 04:04:34.382" level="FAIL">Contain Syntax error: '['/etc/ansible/playbook/Linux/AddUser.yml']' does not contain '/etc/ansible/playbook/Linux/groupadministration.yml'</msg>
+<status status="FAIL" starttime="20200908 04:04:34.381" endtime="20200908 04:04:34.382"></status>
+</kw>
+<status status="FAIL" starttime="20200908 04:04:26.942" endtime="20200908 04:04:34.383"></status>
+</kw>
+<status status="FAIL" starttime="20200908 04:04:26.941" endtime="20200908 04:04:34.383" critical="yes">Contain Syntax error: '['/etc/ansible/playbook/Linux/AddUser.yml']' does not contain '/etc/ansible/playbook/Linux/groupadministration.yml'</status>
+</test>
+<test id="s1-t3" name="testcase1">
+<kw name="print files">
+<arguments>
+<arg>/etc/ansible/playbook/Linux/linux.yml</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${filename}</arg>
+</arguments>
+<status status="PASS" starttime="20200908 04:04:34.385" endtime="20200908 04:04:34.385"></status>
+</kw>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>python3</arg>
+<arg>linuxrobot.py</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200908 04:04:34.386" level="INFO">Starting process:
+python3 linuxrobot.py</msg>
+<msg timestamp="20200908 04:04:34.390" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200908 04:04:41.987" level="INFO">Process completed.</msg>
+<msg timestamp="20200908 04:04:41.987" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20200908 04:04:34.386" endtime="20200908 04:04:41.987"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${result.stdout}</arg>
+<arg>${filename}</arg>
+<arg>msg=Contain Syntax error</arg>
+</arguments>
+<assign>
+<var>${a}</var>
+</assign>
+<msg timestamp="20200908 04:04:41.989" level="FAIL">Contain Syntax error: '['/etc/ansible/playbook/Linux/AddUser.yml']' does not contain '/etc/ansible/playbook/Linux/linux.yml'</msg>
+<status status="FAIL" starttime="20200908 04:04:41.988" endtime="20200908 04:04:41.989"></status>
+</kw>
+<status status="FAIL" starttime="20200908 04:04:34.384" endtime="20200908 04:04:41.990"></status>
+</kw>
+<status status="FAIL" starttime="20200908 04:04:34.384" endtime="20200908 04:04:41.990" critical="yes">Contain Syntax error: '['/etc/ansible/playbook/Linux/AddUser.yml']' does not contain '/etc/ansible/playbook/Linux/linux.yml'</status>
+</test>
+<test id="s1-t4" name="testcase1">
+<kw name="print files">
+<arguments>
+<arg>/etc/ansible/playbook/Linux/linuxospatching.yml</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${filename}</arg>
+</arguments>
+<status status="PASS" starttime="20200908 04:04:41.994" endtime="20200908 04:04:41.995"></status>
+</kw>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>python3</arg>
+<arg>linuxrobot.py</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200908 04:04:41.996" level="INFO">Starting process:
+python3 linuxrobot.py</msg>
+<msg timestamp="20200908 04:04:42.000" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200908 04:04:50.341" level="INFO">Process completed.</msg>
+<msg timestamp="20200908 04:04:50.342" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20200908 04:04:41.995" endtime="20200908 04:04:50.342"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${result.stdout}</arg>
+<arg>${filename}</arg>
+<arg>msg=Contain Syntax error</arg>
+</arguments>
+<assign>
+<var>${a}</var>
+</assign>
+<msg timestamp="20200908 04:04:50.344" level="FAIL">Contain Syntax error: '['/etc/ansible/playbook/Linux/AddUser.yml']' does not contain '/etc/ansible/playbook/Linux/linuxospatching.yml'</msg>
+<status status="FAIL" starttime="20200908 04:04:50.343" endtime="20200908 04:04:50.344"></status>
+</kw>
+<status status="FAIL" starttime="20200908 04:04:41.993" endtime="20200908 04:04:50.345"></status>
+</kw>
+<status status="FAIL" starttime="20200908 04:04:41.991" endtime="20200908 04:04:50.345" critical="yes">Contain Syntax error: '['/etc/ansible/playbook/Linux/AddUser.yml']' does not contain '/etc/ansible/playbook/Linux/linuxospatching.yml'</status>
+</test>
+<test id="s1-t5" name="testcase1">
+<kw name="print files">
+<arguments>
+<arg>/etc/ansible/playbook/Linux/managingwebserver.yml</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${filename}</arg>
+</arguments>
+<status status="PASS" starttime="20200908 04:04:50.349" endtime="20200908 04:04:50.349"></status>
+</kw>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>python3</arg>
+<arg>linuxrobot.py</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200908 04:04:50.350" level="INFO">Starting process:
+python3 linuxrobot.py</msg>
+<msg timestamp="20200908 04:04:50.355" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200908 04:04:57.940" level="INFO">Process completed.</msg>
+<msg timestamp="20200908 04:04:57.941" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20200908 04:04:50.349" endtime="20200908 04:04:57.941"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${result.stdout}</arg>
+<arg>${filename}</arg>
+<arg>msg=Contain Syntax error</arg>
+</arguments>
+<assign>
+<var>${a}</var>
+</assign>
+<msg timestamp="20200908 04:04:57.943" level="FAIL">Contain Syntax error: '['/etc/ansible/playbook/Linux/AddUser.yml']' does not contain '/etc/ansible/playbook/Linux/managingwebserver.yml'</msg>
+<status status="FAIL" starttime="20200908 04:04:57.942" endtime="20200908 04:04:57.943"></status>
+</kw>
+<status status="FAIL" starttime="20200908 04:04:50.347" endtime="20200908 04:04:57.944"></status>
+</kw>
+<status status="FAIL" starttime="20200908 04:04:50.346" endtime="20200908 04:04:57.945" critical="yes">Contain Syntax error: '['/etc/ansible/playbook/Linux/AddUser.yml']' does not contain '/etc/ansible/playbook/Linux/managingwebserver.yml'</status>
+</test>
+<test id="s1-t6" name="testcase1">
+<kw name="print files">
+<arguments>
+<arg>/etc/ansible/playbook/Linux/snmp.yml</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${filename}</arg>
+</arguments>
+<status status="PASS" starttime="20200908 04:04:57.948" endtime="20200908 04:04:57.949"></status>
+</kw>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>python3</arg>
+<arg>linuxrobot.py</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200908 04:04:57.950" level="INFO">Starting process:
+python3 linuxrobot.py</msg>
+<msg timestamp="20200908 04:04:57.956" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200908 04:05:07.598" level="INFO">Process completed.</msg>
+<msg timestamp="20200908 04:05:07.599" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20200908 04:04:57.949" endtime="20200908 04:05:07.599"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${result.stdout}</arg>
+<arg>${filename}</arg>
+<arg>msg=Contain Syntax error</arg>
+</arguments>
+<assign>
+<var>${a}</var>
+</assign>
+<msg timestamp="20200908 04:05:07.602" level="FAIL">Contain Syntax error: '['/etc/ansible/playbook/Linux/AddUser.yml']' does not contain '/etc/ansible/playbook/Linux/snmp.yml'</msg>
+<status status="FAIL" starttime="20200908 04:05:07.600" endtime="20200908 04:05:07.602"></status>
+</kw>
+<status status="FAIL" starttime="20200908 04:04:57.947" endtime="20200908 04:05:07.602"></status>
+</kw>
+<status status="FAIL" starttime="20200908 04:04:57.946" endtime="20200908 04:05:07.603" critical="yes">Contain Syntax error: '['/etc/ansible/playbook/Linux/AddUser.yml']' does not contain '/etc/ansible/playbook/Linux/snmp.yml'</status>
+</test>
+<test id="s1-t7" name="testcase1">
+<kw name="print files">
+<arguments>
+<arg>/etc/ansible/playbook/Linux/useradministration.yml</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${filename}</arg>
+</arguments>
+<status status="PASS" starttime="20200908 04:05:07.607" endtime="20200908 04:05:07.607"></status>
+</kw>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>python3</arg>
+<arg>linuxrobot.py</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200908 04:05:07.608" level="INFO">Starting process:
+python3 linuxrobot.py</msg>
+<msg timestamp="20200908 04:05:07.613" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200908 04:05:16.734" level="INFO">Process completed.</msg>
+<msg timestamp="20200908 04:05:16.735" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20200908 04:05:07.608" endtime="20200908 04:05:16.736"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${result.stdout}</arg>
+<arg>${filename}</arg>
+<arg>msg=Contain Syntax error</arg>
+</arguments>
+<assign>
+<var>${a}</var>
+</assign>
+<msg timestamp="20200908 04:05:16.741" level="FAIL">Contain Syntax error: '['/etc/ansible/playbook/Linux/AddUser.yml']' does not contain '/etc/ansible/playbook/Linux/useradministration.yml'</msg>
+<status status="FAIL" starttime="20200908 04:05:16.737" endtime="20200908 04:05:16.741"></status>
+</kw>
+<status status="FAIL" starttime="20200908 04:05:07.606" endtime="20200908 04:05:16.742"></status>
+</kw>
+<status status="FAIL" starttime="20200908 04:05:07.604" endtime="20200908 04:05:16.744" critical="yes">Contain Syntax error: '['/etc/ansible/playbook/Linux/AddUser.yml']' does not contain '/etc/ansible/playbook/Linux/useradministration.yml'</status>
+</test>
+<status status="FAIL" starttime="20200908 04:04:19.123" endtime="20200908 04:05:16.751"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="6">Critical Tests</stat>
+<stat pass="1" fail="6">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="6" id="s1" name="Linuxrobottest">Linuxrobottest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200908 04:04:26.940" level="WARN">Multiple test cases with name 'testcase1' executed in test suite 'Linuxrobottest'.</msg>
+<msg timestamp="20200908 04:04:34.384" level="WARN">Multiple test cases with name 'testcase1' executed in test suite 'Linuxrobottest'.</msg>
+<msg timestamp="20200908 04:04:41.991" level="WARN">Multiple test cases with name 'testcase1' executed in test suite 'Linuxrobottest'.</msg>
+<msg timestamp="20200908 04:04:50.346" level="WARN">Multiple test cases with name 'testcase1' executed in test suite 'Linuxrobottest'.</msg>
+<msg timestamp="20200908 04:04:57.946" level="WARN">Multiple test cases with name 'testcase1' executed in test suite 'Linuxrobottest'.</msg>
+<msg timestamp="20200908 04:05:07.604" level="WARN">Multiple test cases with name 'testcase1' executed in test suite 'Linuxrobottest'.</msg>
+</errors>
+</robot>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.6.8 on linux)" generated="20200908 04:40:39.960" rpa="false">
+<suite id="s1" name="Netrobottest" source="/opt/robot/network-security/netrobottest.robot">
+<test id="s1-t1" name="testcase1">
+<kw name="print files">
+<arguments>
+<arg>/etc/ansible/playbook/Network-Security/Networks.yml</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${filename}</arg>
+</arguments>
+<status status="PASS" starttime="20200908 04:40:40.105" endtime="20200908 04:40:40.106"></status>
+</kw>
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>python3</arg>
+<arg>netrobot.py</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200908 04:40:40.107" level="INFO">Starting process:
+python3 netrobot.py</msg>
+<msg timestamp="20200908 04:40:40.111" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200908 04:40:43.097" level="INFO">Process completed.</msg>
+<msg timestamp="20200908 04:40:43.098" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20200908 04:40:40.106" endtime="20200908 04:40:43.098"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${result.stdout}</arg>
+<arg>${filename}</arg>
+<arg>msg=Contain Syntax error</arg>
+</arguments>
+<assign>
+<var>${a}</var>
+</assign>
+<msg timestamp="20200908 04:40:43.100" level="INFO">${a} = None</msg>
+<status status="PASS" starttime="20200908 04:40:43.098" endtime="20200908 04:40:43.100"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${a}</arg>
+</arguments>
+<status status="PASS" starttime="20200908 04:40:43.100" endtime="20200908 04:40:43.100"></status>
+</kw>
+<status status="PASS" starttime="20200908 04:40:40.104" endtime="20200908 04:40:43.101"></status>
+</kw>
+<status status="PASS" starttime="20200908 04:40:40.103" endtime="20200908 04:40:43.101" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200908 04:40:39.964" endtime="20200908 04:40:43.102"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Netrobottest">Netrobottest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

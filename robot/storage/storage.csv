@@ -1,0 +1,5 @@
+${filename}
+/etc/ansible/playbook/Storage/Fabric_switches.yml
+/etc/ansible/playbook/Storage/Netapp_Health.yml
+/etc/ansible/playbook/Storage/PureStorage_Health.yml
+/etc/ansible/playbook/Storage/sandeep.yml

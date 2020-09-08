@@ -1,0 +1,3 @@
+${filename}
+/etc/ansible/playbook/Vmware/Vmtasks.yml
+/etc/ansible/playbook/Vmware/vmware.yml
